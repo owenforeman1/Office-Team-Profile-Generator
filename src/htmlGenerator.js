@@ -31,8 +31,8 @@ const managerCard = function (manager) {
     ${manager.name} <br /> <br /> Manager
   </h4>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">ID ${manager.id} </li>
-    <li class="list-group-item">Email <a href="mailto:${manager.email}">${manager.email}</a></li>
+    <li class="list-group-item">ID: ${manager.id} </li>
+    <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
     <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
   </ul>
 </div>;`;
@@ -45,9 +45,9 @@ const engineerCard = function (engineer) {
     ${engineer.name} <br /> <br /> Engineer
   </h4>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">ID  ${engineer.id}</li>
-    <li class="list-group-item">Email  <a href="mailto:${engineer.email}">${engineer.email}</a></li>
-    <li class="list-group-item">GitHub <a href="https://github.com/${engineer.github}">${engineer.github}</a></li>
+    <li class="list-group-item">ID: ${engineer.id}</li>
+    <li class="list-group-item">Email:  <a href="mailto:${engineer.email}">${engineer.email}</a></li>
+    <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</a></li>
   </ul>
 </div>`;
 };
@@ -59,9 +59,9 @@ const internCard = function (intern) {
     ${intern.name} <br /> <br /> Intern
   </h4>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">ID  ${intern.id}</li>
-    <li class="list-group-item">Email   <a href="mailto:${intern.email}">${intern.email}</a></li>
-    <li class="list-group-item">School  ${intern.school}</li>
+    <li class="list-group-item">ID:  ${intern.id}</li>
+    <li class="list-group-item">Email:   <a href="mailto:${intern.email}">${intern.email}</a></li>
+    <li class="list-group-item">School:  ${intern.school}</li>
   </ul>
 </div>`;
 };
