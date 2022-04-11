@@ -5,7 +5,9 @@ const fs = require("fs");
 const Manager = require("./lib/ManagerC");
 const Engineer = require("./lib/EngineerC");
 const Intern = require("./lib/InternC");
+const htmlGenerator = require("./src/htmlGenerator");
 
+//office members
 const officeTeam = [];
 
 inquirer
@@ -43,11 +45,6 @@ inquirer
     const newManager = new Manager(data.name, data.id, data.email, data.office);
     officeTeam.push(newManager);
     choiceRouter(data.employee);
-    // const filename = `${data.name.toLowerCase().split(" ").join("")}.json`;
-
-    // fs.writeFile(filename, JSON.stringify(data, null, "\t"), (err) =>
-    //   err ? console.log(err) : console.log("Success!")
-    // );
   });
 
 function createEngineer() {
@@ -91,11 +88,6 @@ function createEngineer() {
       );
       officeTeam.push(newEngineer);
       choiceRouter(data.employee);
-      // const filename = `${data.name.toLowerCase().split(" ").join("")}.json`;
-
-      // fs.writeFile(filename, JSON.stringify(data, null, "\t"), (err) =>
-      //   err ? console.log(err) : console.log("Success!")
-      // );
     });
 }
 
@@ -135,11 +127,6 @@ function createIntern() {
       const newIntern = new Intern(data.name, data.id, data.email, data.school);
       officeTeam.push(newIntern);
       choiceRouter(data.employee);
-      // const filename = `${data.name.toLowerCase().split(" ").join("")}.json`;
-
-      // fs.writeFile(filename, JSON.stringify(data, null, "\t"), (err) =>
-      //   err ? console.log(err) : console.log("Success!")
-      // );
     });
 }
 
@@ -160,9 +147,42 @@ function choiceRouter(choice) {
       break;
   }
 }
-
-function doneFunction(params) {
-  console.log("DONE!");
+function cardPageDisplay(officeTeam) {
+  let teamCard = "";
+  for (let index = 0; index < officeTeam.length; index++) {
+    const employee = officeTeam[index];
+    const employeeRole = employee.getRole();
+    switch (employeeRole) {
+      case "Engineer":
+        teamCard = teamCard + htmlGenerator.engineerCard(employee);
+        break;
+      case "Intern":
+        teamCard = teamCard + htmlGenerator.internCard(employee);
+        break;
+      case "Manager":
+        teamCard = teamCard + htmlGenerator.managerCard(employee);
+        break;
+      default:
+        break;
+    }
+  }
+  return teamCard;
 }
-//function to gwt info foe eng or intern, prompt
+
+function doneFunction() {
+  
+  var finalCardDisplay = cardPageDisplay(officeTeam);
+  var pageDisplayFinal = htmlGenerator.htmlPage(finalCardDisplay);
+
+  const filename = `Office-Team-Page.html`;
+
+  fs.writeFile(filename, pageDisplayFinal, (err) =>
+    err ? console.log(err) : console.log("Done!")
+  );
+}
+
+//then display on html template
+//writes to file
+
 //done function to print all on html
+//mailto links
