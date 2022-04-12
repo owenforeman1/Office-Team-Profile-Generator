@@ -17,8 +17,12 @@ const htmlPage = function (teamCard) {
   </div>
 </header>
 
-<body>
+<body style="background-color: #e1e1e1">
+  <div class="container">
+    <div class="row justify-content-center">
 ${teamCard}
+    </div>
+  </div>
 </body>
 
 </html>`;
@@ -26,7 +30,7 @@ ${teamCard}
 
 //manager
 const managerCard = function (manager) {
-  return `<div class="card " style="width: 18 rem">
+  return `<div class="card mr-3 my-3 w-25 ">
   <h4 class="card-header" style="background-color: cadetblue;">
     ${manager.name} <br /> <br /> Manager
   </h4>
@@ -40,7 +44,7 @@ const managerCard = function (manager) {
 
 //engineer
 const engineerCard = function (engineer) {
-  return `<div class="card " style="width: 18 rem">
+  return `<div class="card mr-3 my-3 w-25">
   <h4 class="card-header" style="background-color: cadetblue;">
     ${engineer.name} <br /> <br /> Engineer
   </h4>
@@ -54,7 +58,7 @@ const engineerCard = function (engineer) {
 
 //intern
 const internCard = function (intern) {
-  return `<div class="card " style="width: 18 rem">
+  return `<div class="card mr-3 my-3 w-25">
   <h4 class="card-header" style="background-color: cadetblue;">
     ${intern.name} <br /> <br /> Intern
   </h4>

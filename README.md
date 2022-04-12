@@ -2,7 +2,7 @@
 
 ## Description
 
-I made an easy to use command line office team maker. I wanted to organize and have basic info for each employee on a generated html page. It displays an employees name, role, email and specific things for the role such as github username or school the intern came from. I use tests to make sure my code works for each employee and have scripts for each card to be displayed on page. I learned a lot about how tests work and how to build them. I learned a lot about how to use code from seperate files in a seperate file. 
+I made an easy to use command line office team maker. I wanted to organize and have basic info for each employee on a generated html page. It displays an employees name, role, email and specific things for the role such as github username or school the intern came from. I use tests to make sure my code works for each employee and have scripts for each card to be displayed on page. I learned a lot about how tests work and how to build them. I learned a lot about how to use code from seperate files in a seperate file and a lot about OOP and TDD. 
 
 ## Table of Contents
 
@@ -16,14 +16,7 @@ I made an easy to use command line office team maker. I wanted to organize and h
 The user should clone the repo and install node then install jest if they want to use the tests. Open the index.js in the command line and run it to start building your team. 
 
 ## Usage
-
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![](assets/images/screencapture-file-C-Users-owen-Desktop-Bootcamp-Homework-Team-Profile-Generator-Office-Team-Page-html-2022-04-11-20_50_13.png)
 
 ## License
 
@@ -56,4 +49,4 @@ owen4man@gmail.com
 
 ## Tests
 
-Run the tests with npm run test. 
+Run the four tests with npm test. 
