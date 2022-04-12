@@ -17,7 +17,9 @@ The user should clone the repo and install node then install jest if they want t
 
 ## Usage
 ![](assets/images/screencapture-file-C-Users-owen-Desktop-Bootcamp-Homework-Team-Profile-Generator-Office-Team-Page-html-2022-04-11-20_50_13.png)
-![](assets/images/video.webm)
+
+Video Walkthrough => https://drive.google.com/file/d/1hxjE2rug6kt48-4BsJQHWU4iZufyAS0m/view
+
 ## License
 
 MIT License
